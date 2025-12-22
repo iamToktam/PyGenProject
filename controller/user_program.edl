@@ -1,0 +1,39 @@
+INPUT name
+PRINT "Hello," name
+PRINT "Hello name"
+PRINT "Hello" "name:" name
+
+SET x
+SET x 10
+SET y 5
+PRINT "Initial x:" x "Initial y:" y
+
+ADD x 2
+PRINT "x after ADD:" x
+
+SET z x
+PRINT "z copied from x:" z
+
+SUB y 3
+PRINT "y after SUB:" y
+
+MUL x y
+PRINT "x * y =" x
+
+DIV x 5
+PRINT "x after DIV:" x
+
+ADD y 10
+MOD y 3
+PRINT "y after ADD & MOD:" y
+
+CLC r x ADD y
+PRINT "r = x + y:" r
+
+CLC s x MUL y
+PRINT "s = x * y:" s
+
+CLC t s DIV x
+PRINT "t = s / x:" t
+
+PRINT "Final values ->" "x:" x "y:" y "z:" z "r:" r "s:" s "t:" t
