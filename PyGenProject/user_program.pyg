@@ -35,5 +35,17 @@ PRINT "s = x * y:" s
 
 CLC t s DIV x
 PRINT "t = s / x:" t
+SET count 0
+// This is a comment - it will be ignored.
+WHILE count < 3 DO
+    PRINT "While loop:" count
+    ADD count 1
+ENDWHILE
 
+FOR i FROM 1 TO 5 STEP 2 DO  // for with step 2
+    PRINT "For loop:" i
+    // Comment inside the block
+ENDFOR
+
+PRINT "End of program"
 PRINT "Final values ->" "x:" x "y:" y "z:" z "r:" r "s:" s "t:" t
