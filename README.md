@@ -2,7 +2,7 @@
 
 A Small Programming Language (Python Generation)
 
-## 📖 Introduction
+## Introduction
 
 **PyGen** (short for *Python Generation*) is a small, custom programming language developed as a university project for the course **Design of Programming Languages**.
 
@@ -15,14 +15,13 @@ The project follows the classical steps of language design:
 PyGen supports variable declaration, arithmetic and logical operations, conditional statements, loops, and comments.  
 Its main purpose is educational: to provide a clear and practical example of how a programming language is designed and implemented from scratch.
 
-## 🎯 Goal
+## Goal
 
 Our goal is to demonstrate the process of designing a small programming language, from formal grammar definition to practical implementation. (PyGen is designed for educational purposes only and acts as a tool for learning the principles of programming language design and interpreter implementation.)
 
-## 📐 Grammar
+## Grammar
 
 The formal grammar of PyGen is defined as follows:
-
 ```ebnf
 <program> ::= { <statement> | <comment> }
 
@@ -96,7 +95,7 @@ The formal grammar of PyGen is defined as follows:
 <any_character> ::= [^"] | .
 ```
 
-## ✨ Features
+## Features
 
 - **Variable handling**
   - Assignment using `SET`
@@ -124,8 +123,20 @@ The formal grammar of PyGen is defined as follows:
 - **Comments**
   - Single-line comments using `//`
 
-## 🚀 Usage & Examples
-Example Program
+## Usage
+To run a PyGen program:
+1. Clone the repository:
+```
+git clone  https://github.com/iamToktam/spl_project.git
+cd spl_project
+```
+2. Execute the interpreter:
+```
+python -m PyGenProject.core.commands sample.pyg
+```
+
+## Examples
+Example Program in the sample.pyg
 ```
 SET x 10
 SET y 5
@@ -145,7 +156,7 @@ x is greater than y
 x after addition: 12
 ```
 
-## 🔮 Limitations & Future Work
+## Limitations & Future Work
 
 Although PyGen successfully demonstrates the design and implementation of a small programming language, it has some limitations:
 - No functions or procedures
