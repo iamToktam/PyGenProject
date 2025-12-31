@@ -123,6 +123,29 @@ The formal grammar of PyGen is defined as follows:
 - **Comments**
   - Single-line comments using `//`
 
+## Technical Architecture (How it Works)
+
+This project is built using a modular architecture. Each file plays a specific role in the interpretation process:
+
+1. `tokenizer.py` (The Lexer)
+- Role: Breaks the raw source code into meaningful units called "Tokens".
+- Functionality: It handles strings in quotes, ignores comments (starting with //), and categorizes keywords like IF, WHILE, and SET. It ensures the language is case-insensitive.
+
+2. `commands.py` (The Execution Engine)
+- Role: Manages the "Memory" of the language and executes primitive operations.
+- Functionality: It stores variables in a dictionary. It handles arithmetic (ADD, MUL, etc.), logical operations, and input/output. It also contains the logic to evaluate complex conditions for control flow.
+
+3. `interpreter.py` (The Orchestrator)
+- Role: Controls the flow of the program.
+- Functionality: It reads the tokens and decides which command to execute. It manages block-level logic such as IF-ELIF-ELSE structures and WHILE/FOR loops, ensuring that only the correct blocks of code are run.
+
+4. `error_codes.py` (Error Management)
+- Role: Provides user-friendly error reporting.
+- Functionality: Maps error codes (e.g., E001) to descriptive messages in red color, helping the developer debug their PyGen code.
+
+5. `main.py` (Entry Point)
+- Role: Loads the .edl or .pyg file and starts the interpreter.
+
 ## Usage
 To run a PyGen program:
 1. Clone the repository:
